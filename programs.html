@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs | Sibongile Creche</title>
+    <link rel="stylesheet" href="css_assets/myfirst.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for Programs page */
+        .programs-hero {
+            background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 100%);
+            color: var(--text-dark);
+            text-align: center;
+            padding: 6rem 1rem 4rem;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 3rem;
+        }
+        
+        .programs-hero h1 {
+            color: var(--primary-red);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .age-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .age-badge {
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .age-badge i {
+            color: var(--primary-red);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">SC</div>
+                    <h1>Sibongile Creche</h1>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="programs.html" class="active">Our Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="programs-hero">
+        <div class="container">
+            <h1>Our Learning Programs</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Age-appropriate care and education for every stage of early childhood development</p>
+            
+            <div class="age-badges">
+                <div class="age-badge">
+                    <i class="fas fa-baby"></i>
+                    <span>6-18 months</span>
+                </div>
+                <div class="age-badge">
+                    <i class="fas fa-child"></i>
+                    <span>18-36 months</span>
+                </div>
+                <div class="age-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>3-5 years</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <!-- Program Cards -->
+            <div class="program-cards">
+                <!-- Baby Program -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h2><i class="fas fa-baby"></i> Baby Care Program</h2>
+                        <p>For infants 6-18 months</p>
+                    </div>
+                    <div class="program-body">
+                        <h3>Nurturing Our Little Ones</h3>
+                        <p>Our baby program creates a safe, warm, and stimulating environment for our youngest learners with individualized care and attention.</p>
+                        
+                        <h4>Key Focus Areas:</h4>
+                        <ul>
+                            <li>Secure attachment and bonding with caregivers</li>
+                            <li>Sensory stimulation and exploration activities</li>
+                            <li>Early motor skills development</li>
+                            <li>Language exposure through songs and stories</li>
+                            <li>Individualized feeding and nap schedules</li>
+                        </ul>
+                        
+                        <h4>Daily Schedule:</h4>
+                        <div class="daily-schedule">
+                            <p>7:00 AM - Arrival & Free Play</p>
+                            <p>9:00 AM - Morning Snack</p>
+                            <p>9:30 AM - Sensory Activities</p>
+                            <p>11:00 AM - Outdoor Time</p>
+                            <p>12:00 PM - Lunch & Nap Time</p>
+                            <p>3:00 PM - Afternoon Snack</p>
+                            <p>3:30 PM - Music & Movement</p>
+                            <p>5:00 PM - Departure</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Toddler Program -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h2><i class="fas fa-child"></i> Toddler Program</h2>
+                        <p>For children 18 months - 3 years</p>
+                    </div>
+                    <div class="program-body">
+                        <h3>Exploring the World</h3>
+                        <p>Our toddler program encourages curiosity, independence, and social skills through play-based learning in a structured yet flexible environment.</p>
+                        
+                        <h4>Key Focus Areas:</h4>
+                        <ul>
+                            <li>Social skills development and sharing</li>
+                            <li>Language and communication skills</li>
+                            <li>Fine and gross motor skills refinement</li>
+                            <li>Potty training support and guidance</li>
+                            <li>Creative expression through art and music</li>
+                        </ul>
+                        
+                        <h4>Daily Schedule:</h4>
+                        <div class="daily-schedule">
+                            <p>7:00 AM - Arrival & Free Play</p>
+                            <p>8:30 AM - Circle Time (songs, weather)</p>
+                            <p>9:00 AM - Morning Snack</p>
+                            <p>9:30 AM - Theme-Based Learning Activity</p>
+                            <p>10:30 AM - Outdoor Play</p>
+                            <p>12:00 PM - Lunch & Quiet Time</p>
+                            <p>2:00 PM - Art/Creative Activity</p>
+                            <p>3:00 PM - Afternoon Snack</p>
+                            <p>3:30 PM - Story Time</p>
+                            <p>5:00 PM - Departure</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Preschool Program -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h2><i class="fas fa-graduation-cap"></i> Preschool Program</h2>
+                        <p>For children 3-5 years (Grade R)</p>
+                    </div>
+                    <div class="program-body">
+                        <h3>Ready for School</h3>
+                        <p>Our preschool program prepares children for formal schooling with a balanced approach to academic, social, and emotional development.</p>
+                        
+                        <h4>Key Focus Areas:</h4>
+                        <ul>
+                            <li>Early literacy and numeracy foundation</li>
+                            <li>Problem-solving and critical thinking skills</li>
+                            <li>Social-emotional development</li>
+                            <li>Independence and responsibility</li>
+                            <li>Creative thinking and self-expression</li>
+                        </ul>
+                        
+                        <h4>Daily Schedule:</h4>
+                        <div class="daily-schedule">
+                            <p>7:00 AM - Arrival & Learning Centers</p>
+                            <p>8:30 AM - Morning Meeting</p>
+                            <p>9:00 AM - Focused Learning (Math/Literacy)</p>
+                            <p>10:00 AM - Morning Snack</p>
+                            <p>10:30 AM - Outdoor Learning & Play</p>
+                            <p>12:00 PM - Lunch</p>
+                            <p>1:00 PM - Rest/Quiet Activities</p>
+                            <p>2:00 PM - Creative Arts/Science</p>
+                            <p>3:00 PM - Afternoon Snack</p>
+                            <p>3:30 PM - Story & Review of Day</p>
+                            <p>5:00 PM - Departure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+                
+                <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.1);">
+                    <p style="color: var(--text-dark); font-size: 1.1rem;">
+                        <i class="fas fa-info-circle" style="color: var(--primary-red); margin-right: 0.5rem;"></i>
+                        We are closed on public holidays. Early drop-off or late pick-up available by arrangement.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- What We Provide Section -->
+            <div class="page-header">
+                <h2>What We Provide</h2>
+                <p>Everything included in our programs</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: var(--soft-red);">
+                        <i class="fas fa-apple-alt" style="color: var(--primary-red);"></i>
+                    </div>
+                    <h3>Nutritious Meals</h3>
+                    <p>Balanced breakfast, lunch, and snacks following nutritional guidelines for growing children.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: var(--soft-red);">
+                        <i class="fas fa-first-aid" style="color: var(--primary-red);"></i>
+                    </div>
+                    <h3>Health & Safety</h3>
+                    <p>First aid certified staff, secure premises, and regular health checks ensure your child's wellbeing.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: var(--soft-red);">
+                        <i class="fas fa-book-reader" style="color: var(--primary-red);"></i>
+                    </div>
+                    <h3>Learning Materials</h3>
+                    <p>Age-appropriate educational toys, books, and materials to support development in all areas.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: var(--soft-red);">
+                        <i class="fas fa-clipboard-check" style="color: var(--primary-red);"></i>
+                    </div>
+                    <h3>Progress Reports</h3>
+                    <p>Regular updates on your child's development and parent-teacher meetings twice a year.</p>
+                </div>
+            </div>
+            
+            <!-- Fees Information -->
+            <div class="feature-card" style="margin-top: 4rem; text-align: center; background: linear-gradient(135deg, var(--light-gray), white);">
+                <h3 style="color: var(--primary-red);">Fee Information</h3>
+                <p style="font-size: 1.1rem; margin: 1.5rem 0;">We offer competitive rates with sibling discounts. All fees include meals, educational materials, and basic care items.</p>
+                <p style="font-weight: bold; color: var(--text-dark); margin-bottom: 1.5rem;">Contact us for detailed fee structure and enrollment forms.</p>
+                <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">
+                    <i class="fas fa-phone"></i> Contact Us for Fees
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sibongile Creche</h3>
+                    <p>Providing quality early childhood education and care in Soshanguve Block FF since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 81 Lepogo Street, Soshanguve FF</li>
+                        <li><i class="fas fa-phone"></i> 012 798 1950</li>
+                        <li><i class="fab fa-whatsapp"></i> 071 234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@sibongilecreche.co.za</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 7:00 AM - 3:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Sibongile Creche. All rights reserved.</p>
+                <p>ECD Registration Number: [Your ECD Number] | Ages: 3 months to Grade R</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

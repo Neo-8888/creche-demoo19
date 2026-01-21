@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Sibongile Creche</title>
+    <link rel="stylesheet" href="css_assets/myfirst.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">SC</div>
+                    <h1>Sibongile Creche</h1>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Our Gallery</h1>
+                <p>See our happy learners in action at Sibongile Creche</p>
+                <p class="mt-1" style="color: var(--text-light); font-size: 0.9rem;">
+                    <i class="fas fa-info-circle"></i> All photos are shared with parental consent
+                </p>
+            </div>
+            
+            <!-- Gallery Images -->
+            <div class="gallery-grid">
+                <!-- Image 1 -->
+                <div class="gallery-item">
+                    <img src="image_assets/childrenlearning.png" alt="Children playing">
+                    <div>
+                        <p><strong>Play Time</strong></p>
+                        <p>Children enjoying outdoor activities in our safe playground</p>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="gallery-item">
+                    <img src="image_assets/leanact.png" alt="Learning activities">
+                    <div>
+                        <p><strong>Learning Activities</strong></p>
+                        <p>Engaging educational activities for young minds</p>
+                    </div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="gallery-item">
+                    <img src="image_assets/projects.png" alt="Art projects">
+                    <div>
+                        <p><strong>Art Projects</strong></p>
+                        <p>Creative art and craft sessions</p>
+                    </div>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="gallery-item">
+                    <img src="image_assets/reading.png" alt="Reading time">
+                    <div>
+                        <p><strong>Story Time</strong></p>
+                        <p>Children enjoying reading and storytelling sessions</p>
+                    </div>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="gallery-item">
+                    <img src="image_assets/group.png" alt="Group activities">
+                    <div>
+                        <p><strong>Group Activities</strong></p>
+                        <p>Learning teamwork and social skills</p>
+                    </div>
+                </div>
+                
+                <!-- Image 6 -->
+                <div class="gallery-item">
+                    <img src="image_assets/celeb.png" alt="Celebrations">
+                    <div>
+                        <p><strong>Special Events</strong></p>
+                        <p>Celebrating birthdays and cultural events</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Note for parents -->
+            <div class="feature-card mt-3" style="text-align: center;">
+                <h3><i class="fas fa-camera color-red"></i> Photo Policy</h3>
+                <p class="mt-1">We respect the privacy of our children. All photos are taken with parental permission. If you wish to have a photo of your child removed, please contact us immediately.</p>
+                <a href="contact.html" class="btn btn-primary mt-2">Contact About Photos</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sibongile Creche</h3>
+                    <p>Providing quality early childhood education and care in Soshanguve Block FF since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Block FF, Soshanguve</li>
+                        <li><i class="fas fa-phone"></i> (012) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@sibongilecreche.co.za</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 7:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Sibongile Creche. All rights reserved.</p>
+                <p>ECD Registration Number: [Your ECD Number]</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

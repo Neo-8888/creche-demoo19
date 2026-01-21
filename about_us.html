@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Sibongile Creche</title>
+    <link rel="stylesheet" href="css_assets/myfirst.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Special About Us Page Styles */
+        .about-hero-special {
+            background: linear-gradient(135deg, #fff5f5 0%, #e3f2fd 100%);
+            color: var(--text-dark);
+            text-align: center;
+            padding: 8rem 1rem 6rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            border-radius: 0 0 40% 40% / 0 0 30px 30px;
+        }
+        
+        /* Animated Background Elements */
+        .floating-element {
+            position: absolute;
+            opacity: 0.7;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .element-1 {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-red);
+            border-radius: 50% 50% 50% 0;
+            top: 20%;
+            left: 10%;
+            animation: float1 20s infinite ease-in-out;
+        }
+        
+        .element-2 {
+            width: 40px;
+            height: 40px;
+            background: var(--sun-yellow);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            top: 60%;
+            right: 15%;
+            animation: float2 25s infinite ease-in-out;
+        }
+        
+        .element-3 {
+            width: 50px;
+            height: 50px;
+            background: var(--sky-blue);
+            border-radius: 50%;
+            bottom: 30%;
+            left: 20%;
+            animation: float3 30s infinite ease-in-out;
+        }
+        
+        .element-4 {
+            width: 45px;
+            height: 45px;
+            background: var(--ocean-blue);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            top: 30%;
+            right: 25%;
+            animation: float4 22s infinite ease-in-out;
+        }
+        
+        .element-5 {
+            width: 35px;
+            height: 35px;
+            background: var(--violet);
+            border-radius: 50% 20% 50% 30%;
+            bottom: 40%;
+            right: 10%;
+            animation: float5 28s infinite ease-in-out;
+        }
+        
+        /* Leaf/Flower Shapes */
+        .leaf {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, var(--ocean-blue), var(--sky-blue));
+            border-radius: 0 100%;
+            opacity: 0.6;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .leaf-1 {
+            top: 15%;
+            left: 5%;
+            transform: rotate(45deg);
+            animation: leafFloat1 35s infinite linear;
+        }
+        
+        .leaf-2 {
+            top: 70%;
+            right: 5%;
+            transform: rotate(135deg);
+            animation: leafFloat2 40s infinite linear;
+        }
+        
+        .leaf-3 {
+            bottom: 20%;
+            left: 15%;
+            transform: rotate(225deg);
+            animation: leafFloat3 30s infinite linear;
+        }
+        
+        /* Animations */
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, -30px) rotate(90deg); }
+            50% { transform: translate(-15px, -20px) rotate(180deg); }
+            75% { transform: translate(10px, 15px) rotate(270deg); }
+        }
+        
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-25px, 20px) rotate(120deg); }
+            66% { transform: translate(20px, -15px) rotate(240deg); }
+        }
+        
+        @keyframes float3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, 30px) scale(1.2); }
+        }
+        
+        @keyframes float4 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-20px, -20px) rotate(180deg); }
+        }
+        
+        @keyframes float5 {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(100px, 100px) rotate(360deg); }
+        }
+        
+        @keyframes leafFloat1 {
+            0% { transform: translate(0, 0) rotate(45deg); }
+            25% { transform: translate(50px, -30px) rotate(90deg); }
+            50% { transform: translate(100px, 20px) rotate(135deg); }
+            75% { transform: translate(50px, 50px) rotate(180deg); }
+            100% { transform: translate(0, 0) rotate(225deg); }
+        }
+        
+        @keyframes leafFloat2 {
+            0% { transform: translate(0, 0) rotate(135deg); }
+            33% { transform: translate(-60px, 40px) rotate(180deg); }
+            66% { transform: translate(-30px, -30px) rotate(225deg); }
+            100% { transform: translate(0, 0) rotate(270deg); }
+        }
+        
+        @keyframes leafFloat3 {
+            0% { transform: translate(0, 0) rotate(225deg); }
+            50% { transform: translate(40px, -40px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(315deg); }
+        }
+        
+        /* Content Styles */
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-hero-special h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-red);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-hero-special p {
+            font-size: 1.4rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: var(--text-dark);
+        }
+        
+        /* Story Section with Animation */
+        .story-card {
+            background: white;
+            border-radius: 25px;
+            padding: 4rem;
+            margin: 4rem auto;
+            max-width: 900px;
+            box-shadow: 0 20px 60px rgba(230, 57, 70, 0.1);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--soft-red);
+        }
+        
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-red), var(--sun-yellow), var(--sky-blue), var(--ocean-blue), var(--violet));
+        }
+        
+        /* Values with Icons */
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .value-card {
+            padding: 2.5rem;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            color: white;
+        }
+        
+        .value-card:nth-child(1) .value-icon { background: var(--primary-red); }
+        .value-card:nth-child(2) .value-icon { background: var(--sun-yellow); color: #333; }
+        .value-card:nth-child(3) .value-icon { background: var(--sky-blue); }
+        .value-card:nth-child(4) .value-icon { background: var(--ocean-blue); }
+        
+        /* Stats with Animation */
+        .stats-animated {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--light-gray), white);
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            position: relative;
+        }
+        
+        .stat-circle::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            border: 2px dashed;
+            animation: rotate 20s linear infinite;
+        }
+        
+        .stat-circle:nth-child(1) { background: var(--primary-red); }
+        .stat-circle:nth-child(1)::after { border-color: var(--primary-red); }
+        
+        .stat-circle:nth-child(2) { background: var(--sun-yellow); color: #333; }
+        .stat-circle:nth-child(2)::after { border-color: var(--sun-yellow); }
+        
+        .stat-circle:nth-child(3) { background: var(--sky-blue); }
+        .stat-circle:nth-child(3)::after { border-color: var(--sky-blue); }
+        
+        .stat-circle:nth-child(4) { background: var(--ocean-blue); }
+        .stat-circle:nth-child(4)::after { border-color: var(--ocean-blue); }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-hero-special {
+                padding: 6rem 1rem 4rem;
+                min-height: 50vh;
+            }
+            
+            .about-hero-special h1 {
+                font-size: 2.5rem;
+            }
+            
+            .story-card {
+                padding: 2rem;
+                margin: 2rem auto;
+            }
+            
+            .floating-element, .leaf {
+                display: none; /* Hide animations on mobile for performance */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">SC</div>
+                    <h1>Sibongile Creche</h1>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html" class="active">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Special Animated Hero -->
+    <section class="about-hero-special">
+        <!-- Animated Background Elements -->
+        <div class="floating-element element-1"></div>
+        <div class="floating-element element-2"></div>
+        <div class="floating-element element-3"></div>
+        <div class="floating-element element-4"></div>
+        <div class="floating-element element-5"></div>
+        
+        <!-- Leaf/Flower Shapes -->
+        <div class="leaf leaf-1"></div>
+        <div class="leaf leaf-2"></div>
+        <div class="leaf leaf-3"></div>
+        
+        <div class="container about-hero-content">
+            <h1>Our Story</h1>
+            <p>A journey of love, care, and community in Soshanguve</p>
+            <div style="margin-top: 2rem;">
+                <a href="#our-story" class="btn btn-primary" style="padding: 1rem 2.5rem;">
+                    <i class="fas fa-book-open"></i> Read Our Story
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <!-- Story Card -->
+            <div id="our-story" class="story-card">
+                <h2 style="color: var(--primary-red); text-align: center; margin-bottom: 2rem;">
+                    <i class="fas fa-heart" style="margin-right: 0.5rem;"></i>
+                    Welcome to Our Creche Family
+                </h2>
+                
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    In 2010, <strong>Mrs. Sibongile Mthembu</strong> opened her home and heart to the children of Soshanguve Block FF. What started as a small home-based daycare has grown into a beloved community creche that has cared for hundreds of children over the past 14 years.
+                </p>
+                
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Our name <strong>"Sibongile"</strong> means <em>"We are thankful"</em> in isiZulu. This isn't just a name - it's our philosophy. We're thankful for every child who walks through our doors, every parent who trusts us, and every day we get to do what we love.
+                </p>
+                
+                <div style="background: var(--soft-red); padding: 1.5rem; border-radius: 15px; margin-top: 2rem; border-left: 4px solid var(--primary-red);">
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin: 0; color: var(--text-dark);">
+                        <i class="fas fa-quote-left" style="color: var(--primary-red); margin-right: 0.5rem;"></i>
+                        <strong>Our Promise:</strong> To provide a safe, loving environment where children can learn, play, and grow while their parents work or study with peace of mind.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Animated Stats -->
+            <div class="stats-animated">
+                <div style="text-align: center;">
+                    <div class="stat-circle">14+</div>
+                    <h4>Years Serving</h4>
+                    <p>Since 2010</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div class="stat-circle">500+</div>
+                    <h4>Happy Children</h4>
+                    <p>In our care</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div class="stat-circle">100%</div>
+                    <h4>Safe & Registered</h4>
+                    <p>Peace of mind</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div class="stat-circle">3-GR</div>
+                    <h4>Ages We Serve</h4>
+                    <p>3 months to Grade R</p>
+                </div>
+            </div>
+
+            <!-- Our Values -->
+            <div class="page-header">
+                <h1>What Guides Us</h1>
+                <p>The values that shape everything we do</p>
+            </div>
+            
+            <div class="values-container">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 style="color: var(--primary-red);">Loving Care</h3>
+                    <p>We treat every child as if they were our own, with warmth, patience, and affection.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 style="color: var(--primary-red);">Safety First</h3>
+                    <p>Our facility, staff, and procedures are all designed with your child's safety as the top priority.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 style="color: var(--primary-red);">Learning Through Play</h3>
+                    <p>We believe children learn best when they're having fun and exploring their world.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 style="color: var(--primary-red);">Community Spirit</h3>
+                    <p>We're proud to be part of Soshanguve and work closely with local families.</p>
+                </div>
+            </div>
+
+            <!-- Simple CTA -->
+            <div style="text-align: center; margin: 4rem 0; padding: 3rem; background: linear-gradient(135deg, var(--soft-red), white); border-radius: 25px;">
+                <h2 style="color: var(--primary-red); margin-bottom: 1.5rem;">Come See For Yourself</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    The best way to understand our creche is to visit us. We'd love to show you around and answer any questions you have.
+                </p>
+                <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                    <i class="fas fa-calendar-day"></i> Schedule a Visit
+                </a>
+                <a href="gallery.html" class="btn btn-secondary" style="padding: 1rem 2.5rem; font-size: 1.1rem; margin-left: 1rem;">
+                    <i class="fas fa-images"></i> View Photos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sibongile Creche</h3>
+                    <p>Providing quality early childhood education and care in Soshanguve Block FF since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 81 Lepogo Street, Soshanguve FF</li>
+                        <li><i class="fas fa-phone"></i> 012 798 1950</li>
+                        <li><i class="fab fa-whatsapp"></i> 071 234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@sibongilecreche.co.za</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 7:00 AM - 3:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Sibongile Creche. All rights reserved.</p>
+                <p>ECD Registration Number: [Your ECD Number] | Ages: 3 months to Grade R</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        
+        // Parallax effect for floating elements on scroll
+        document.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            document.querySelectorAll('.floating-element, .leaf').forEach(element => {
+                element.style.transform = `translateY(${rate * 0.5}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
