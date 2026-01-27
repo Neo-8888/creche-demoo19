@@ -256,6 +256,76 @@ nav {
     color: var(--primary-red);
 }
 
+/* ===== FEES & PACKAGES ===== */
+.fees {
+    padding: 4rem 0;
+    background-color: var(--soft-red);
+}
+
+.fees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.fee-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.fee-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.age {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+.price span {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--text-light);
+}
+
+.fee-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.fee-card ul li {
+    margin-bottom: 0.6rem;
+    color: var(--text-dark);
+}
+
+/* Featured (Most Popular) */
+.fee-card.featured {
+    border: 2px solid var(--primary-red);
+    transform: scale(1.05);
+}
+
+.fees-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+
+
 /* Why Choose Us Section */
 .why-choose-section {
     background-color: var(--light-gray);
@@ -488,6 +558,26 @@ nav {
 }
 
 /* ===== PROGRAM CARDS ===== */
+
+.age-badge {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.age-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.age-badge:active {
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .program-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -598,6 +688,7 @@ nav {
     outline: none;
     border-color: var(--primary-red);
 }
+
 
 /* ===== FOOTER ===== */
 footer {
