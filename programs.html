@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css_assets/myfirst.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Additional styles for Programs page */
         .programs-hero {
             background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 100%);
@@ -40,6 +45,14 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .age-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
         
         .age-badge i {
@@ -75,21 +88,25 @@
     <section class="programs-hero">
         <div class="container">
             <h1>Our Learning Programs</h1>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Age-appropriate care and education for every stage of early childhood development</p>
-            
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                Age-appropriate care and education for every stage of early childhood development
+            </p>
+
             <div class="age-badges">
-                <div class="age-badge">
+                <a href="#baby-program" class="age-badge">
                     <i class="fas fa-baby"></i>
-                    <span>6-18 months</span>
-                </div>
-                <div class="age-badge">
+                    <span>6–18 months</span>
+                </a>
+
+                <a href="#toddler-program" class="age-badge">
                     <i class="fas fa-child"></i>
-                    <span>18-36 months</span>
-                </div>
-                <div class="age-badge">
+                    <span>18–36 months</span>
+                </a>
+
+                <a href="#preschool-program" class="age-badge">
                     <i class="fas fa-graduation-cap"></i>
-                    <span>3-5 years</span>
-                </div>
+                    <span>3–5 years</span>
+                </a>
             </div>
         </div>
     </section>
@@ -98,8 +115,9 @@
         <div class="container">
             <!-- Program Cards -->
             <div class="program-cards">
+
                 <!-- Baby Program -->
-                <div class="program-card">
+                <div class="program-card" id="baby-program">
                     <div class="program-header">
                         <h2><i class="fas fa-baby"></i> Baby Care Program</h2>
                         <p>For infants 6-18 months</p>
@@ -132,7 +150,7 @@
                 </div>
                 
                 <!-- Toddler Program -->
-                <div class="program-card">
+                <div class="program-card" id="toddler-program">
                     <div class="program-header">
                         <h2><i class="fas fa-child"></i> Toddler Program</h2>
                         <p>For children 18 months - 3 years</p>
@@ -167,7 +185,7 @@
                 </div>
                 
                 <!-- Preschool Program -->
-                <div class="program-card">
+                <div class="program-card" id="preschool-program">
                     <div class="program-header">
                         <h2><i class="fas fa-graduation-cap"></i> Preschool Program</h2>
                         <p>For children 3-5 years (Grade R)</p>
@@ -203,54 +221,11 @@
                 </div>
             </div>
             
-           
-                
-                <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.1);">
-                    <p style="color: var(--text-dark); font-size: 1.1rem;">
-                        <i class="fas fa-info-circle" style="color: var(--primary-red); margin-right: 0.5rem;"></i>
-                        We are closed on public holidays. Early drop-off or late pick-up available by arrangement.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- What We Provide Section -->
-            <div class="page-header">
-                <h2>What We Provide</h2>
-                <p>Everything included in our programs</p>
-            </div>
-            
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon" style="background: var(--soft-red);">
-                        <i class="fas fa-apple-alt" style="color: var(--primary-red);"></i>
-                    </div>
-                    <h3>Nutritious Meals</h3>
-                    <p>Balanced breakfast, lunch, and snacks following nutritional guidelines for growing children.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon" style="background: var(--soft-red);">
-                        <i class="fas fa-first-aid" style="color: var(--primary-red);"></i>
-                    </div>
-                    <h3>Health & Safety</h3>
-                    <p>First aid certified staff, secure premises, and regular health checks ensure your child's wellbeing.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon" style="background: var(--soft-red);">
-                        <i class="fas fa-book-reader" style="color: var(--primary-red);"></i>
-                    </div>
-                    <h3>Learning Materials</h3>
-                    <p>Age-appropriate educational toys, books, and materials to support development in all areas.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon" style="background: var(--soft-red);">
-                        <i class="fas fa-clipboard-check" style="color: var(--primary-red);"></i>
-                    </div>
-                    <h3>Progress Reports</h3>
-                    <p>Regular updates on your child's development and parent-teacher meetings twice a year.</p>
-                </div>
+            <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.1);">
+                <p style="color: var(--text-dark); font-size: 1.1rem;">
+                    <i class="fas fa-info-circle" style="color: var(--primary-red); margin-right: 0.5rem;"></i>
+                    We are closed on public holidays. Early drop-off or late pick-up available by arrangement.
+                </p>
             </div>
             
             <!-- Fees Information -->
