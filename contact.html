@@ -106,45 +106,84 @@
                     </div>
                 </div>
                 
-                <!-- Simple Contact Form -->
-                <div>
-                    <h2 style="color: var(--primary-red); margin-bottom: 1rem;">Send a Message</h2>
-                    <p style="margin-bottom: 2rem;">Fill out the form below and we'll get back to you within 24 hours.</p>
-                    
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Parent/Guardian Name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="Your contact number">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="child-age">Child's Age *</label>
-                            <select id="child-age" name="child-age" required>
-                                <option value="">Select age range</option>
-                                <option value="3-6">3-6 months</option>
-                                <option value="6-12">6-12 months</option>
-                                <option value="1-2">1-2 years</option>
-                                <option value="2-3">2-3 years</option>
-                                <option value="3-4">3-4 years</option>
-                                <option value="4-5">4-5 years (Grade R)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your child and any questions you have..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                    
+             <!-- Replace the existing contact form block in contact.html with this form and script -->
+<form id="contactForm" class="contact-form">
+  <div class="form-row">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required />
+  </div>
+
+  <div class="form-row">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required />
+  </div>
+
+  <div class="form-row">
+    <label for="phone">Phone</label>
+    <input id="phone" name="phone" type="tel" />
+  </div>
+
+  <div class="form-row">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send Message</button>
+
+  <p id="contactStatus" style="margin-top:1rem; display:none;"></p>
+</form>
+
+<script>
+/* Client-side handler that POSTs to /api/send-email */
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const statusEl = document.getElementById('contactStatus');
+  statusEl.style.display = 'none';
+  statusEl.textContent = '';
+
+  const data = {
+    name: e.target.name.value.trim(),
+    email: e.target.email.value.trim(),
+    phone: e.target.phone.value.trim(),
+    message: e.target.message.value.trim()
+  };
+
+  if (!data.email || !data.message) {
+    statusEl.style.display = '';
+    statusEl.style.color = 'crimson';
+    statusEl.textContent = 'Please provide an email and message.';
+    return;
+  }
+
+  try {
+    const res = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      statusEl.style.display = '';
+      statusEl.style.color = 'green';
+      statusEl.textContent = "Thanks — we'll contact you soon!";
+      e.target.reset();
+    } else {
+      const json = await res.json().catch(() => ({}));
+      statusEl.style.display = '';
+      statusEl.style.color = 'crimson';
+      statusEl.textContent = json?.error || 'Failed to send message. Please try again later.';
+    }
+  } catch (err) {
+    statusEl.style.display = '';
+    statusEl.style.color = 'crimson';
+    statusEl.textContent = 'Network error. Please try again later.';
+  }
+});
+</script>
+
+<!-- Add this script include near the end of the <body> on each page (if not already there):
+<script src="js_assets/site.js"></script>
+-->
                     <!-- Simple form submission message -->
                     <div id="form-message" style="display: none; margin-top: 1rem; padding: 1rem; background-color: var(--soft-red); border-radius: 8px; text-align: center;">
                         <p style="color: var(--primary-red); font-weight: bold;">
