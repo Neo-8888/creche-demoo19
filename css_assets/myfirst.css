@@ -57,6 +57,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 0;
+    position: relative;
 }
 
 .logo {
@@ -847,6 +848,7 @@ footer {
         flex-direction: column;
         padding: 1rem;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1100;
     }
     
     .nav-links.active {

@@ -525,17 +525,6 @@
     </footer>
 
     <script>
-        // Mobile Menu
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-        
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-            });
-        });
-        
         // Parallax effect for floating elements on scroll
         document.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
@@ -546,6 +535,6 @@
             });
         });
     </script>
-    <script src="/myjavascrip.js"></script>
+    <script src="/myjavascrip.js" defer></script>
 </body>
 </html>
