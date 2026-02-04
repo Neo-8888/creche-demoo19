@@ -324,6 +324,72 @@ nav {
     color: var(--text-light);
 }
 
+/* Fees List Layout (No Boxes) */
+.fees-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.fee-row {
+    display: grid;
+    grid-template-columns: 1.2fr 0.6fr 2fr 0.6fr;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.fee-row:last-child {
+    border-bottom: none;
+}
+
+.fee-row-title h3 {
+    margin-bottom: 0.3rem;
+}
+
+.fee-row-price .price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.fee-row-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.2rem;
+    color: var(--text-dark);
+}
+
+.fee-row-details span i {
+    color: var(--primary-red);
+    margin-right: 0.4rem;
+}
+
+.fee-tag {
+    display: inline-block;
+    margin-top: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--soft-red);
+    color: var(--primary-red);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .fee-row {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .fee-row-action .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
 
 
 /* Why Choose Us Section */

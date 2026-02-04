@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Sibongile E.L.C</title>
+    <link rel="stylesheet" href="css_assets/myfirst.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">ELC</div>
+                    <h1>Sibongile E.L.C</h1>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Thank You</h1>
+                <p>Your message has been sent. We will contact you soon.</p>
+            </div>
+
+            <div class="feature-card" style="text-align: center; padding: 3rem;">
+                <div style="margin-bottom: 1.5rem;">
+                    <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--primary-red);"></i>
+                </div>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    We appreciate your interest in Sibongile E.L.C. If your enquiry is urgent, you can call or WhatsApp us directly.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:0127981950" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/27712345678" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sibongile E.L.C</h3>
+                    <p>Providing quality early childhood education and care in Soshanguve Block FF since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 81 Lepogo Street, Soshanguve FF</li>
+                        <li><i class="fas fa-phone"></i> 012 798 1950</li>
+                        <li><i class="fab fa-whatsapp"></i> 071 234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@sibongilecreche.co.za</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 7:00 AM - 3:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Sibongile E.L.C. All rights reserved.</p>
+                <p>ECD Registration Number: [Your ECD Number] | Ages: 3 months to Grade R</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+    <script src="/myjavascrip.js"></script>
+</body>
+</html>
